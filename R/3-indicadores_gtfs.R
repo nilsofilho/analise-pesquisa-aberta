@@ -2,7 +2,6 @@
 
 
 rm(list =ls()); gc()
-# --- 1. LOAD NECESSARY LIBRARIES ---
 source("fun/setup.R")
 
 # GTFS --------------------------------------------------------------------
