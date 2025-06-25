@@ -16,6 +16,9 @@ gtfs_75 <- gtfstools::filter_by_route_id(gtfs,"0075") %>% filter_by_service_id('
 stop_times_75 <- gtfs_75$stop_times
 trips_75 <- gtfs_75$trips
 
+shapes_linha <- gtfstools::convert_shapes_to_sf(gtfs_linha)
+extensao_ida <- shapes_linha %>% st_length()
+
 #corrigindo formato do departure_time e preenchendo vazios
 partidas_programadas <- stop_times_75 %>%
   inner_join(trips_75, by = "trip_id") %>%
