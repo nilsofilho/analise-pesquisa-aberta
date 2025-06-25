@@ -1,4 +1,4 @@
-#Análise dos dados de GPS (usando maio/2025)
+#Análise dos dados de GPS
 
 
 rm(list =ls()); gc()
